@@ -1,0 +1,138 @@
+/* General Styling */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #0f172a;
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+
+/* Layout */
+.container {
+  display: flex;
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+  gap: 40px;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 30%;
+  background: #1e293b;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+.profile-img {
+  width: 100px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.contact-info {
+  margin-top: 20px;
+  text-align: left;
+}
+
+.contact-info p {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 5px 0;
+}
+
+/* Skills */
+.skills {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0;
+}
+
+.skills li {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 8px;
+  border-radius: 6px;
+  margin-bottom: 5px;
+}
+
+/* Download Button */
+.download-btn {
+  display: inline-block;
+  background-color: #ff9800;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s;
+  margin-top: 15px;
+  cursor: pointer;
+}
+
+.download-btn:hover {
+  background-color: #e68900;
+}
+
+/* Main Content */
+.main-content {
+  width: 70%;
+}
+
+.main-content section {
+  margin-bottom: 30px;
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  border-radius: 12px;
+  padding: 20px;
+  color: white;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+      flex-direction: column;
+  }
+
+  .sidebar, .main-content {
+      width: 100%;
+  }
+
+  .card-container {
+      grid-template-columns: 1fr;
+  }
+}
+
+.sidebar {
+  text-align: center;  /* Centers all content inside */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers the image */
+  padding: 10px;
+}
+
+.profile-img {
+  width: 150px;    /* Square shape */
+  height: 150px;   /* Square shape */
+  object-fit: cover; /* Ensures the image fits well */
+  border-radius: 10px; /* Slightly rounded corners */
+  border: 2px solid #007bff; /* Optional border */
+  margin-bottom: 1px; /* Space below the image */
+}
+
