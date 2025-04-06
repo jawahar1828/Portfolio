@@ -28,7 +28,7 @@ const App = () => {
           <li>🔹 Databases (SQL, MongoDB, Firebase)</li>
         </ul>
 
-        <button href="#" className="download-btn">
+        <button href="/Resume.pdf" className="download-btn">
           <FaDownload /> Download CV
         </button>
       </aside>
