@@ -26,7 +26,7 @@ function App() {
           <h2 className="name">Jawahar M</h2>
           <p className="subtitle">🎓 MCA Student|💡Innovator|💻Developer</p>
           <div className="contact-info">
-            <p><FaPhone /> +91 6376979942</p>
+            <p><FaPhone /> +91 6379679942</p>
             <p><FaEnvelope /> postboxno184@gmail.com</p>
             <p><FaMapMarkerAlt /> Hosur, Tamil Nadu</p>
           </div>
