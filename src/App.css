@@ -1,138 +1,184 @@
-/* General Styling */
+/* Global Styles */
 body {
-  font-family: 'Poppins', sans-serif;
-  background-color: #0f172a;
-  color: white;
   margin: 0;
   padding: 0;
+  font-family: "Poppins", sans-serif;
+  background-color: #f4f4f4;
+}
+
+.container.dark {
+  background-color: #0f172a;
+  color: #fff;
+}
+
+.container.light {
+  background-color: #ffffff;
+  color: #333;
 }
 
 /* Layout */
-.container {
+.content-wrapper {
   display: flex;
-  max-width: 1200px;
-  margin: auto;
-  padding: 20px;
-  gap: 40px;
+  gap: 20px;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
 }
 
-/* Sidebar */
 .sidebar {
   width: 30%;
-  background: #1e293b;
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
-  text-align: center;
+  background: linear-gradient(135deg, #f2f2f5, #a2a2a5);
+  border-radius: 20px;
+  /* padding: 20px; */
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-.profile-img {
-  width: 100px;
-  border-radius: 50%;
-  margin-bottom: 10px;
+.container.dark .sidebar {
+  background: linear-gradient(135deg, #1e293b, #334155);
+}
+.name{
+  align-items: center;
+  margin-left: 10%;
+}
+
+.profile-img-square {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 20px;
+  display: block;
+  margin: 0 auto 10px;
+  border: 3px solid #4f46e5;
+  margin-top: 20px;
+}
+
+.subtitle {
+  font-weight: 500;
+  font-size: 1rem;
+  margin-left: 10px;
 }
 
 .contact-info {
   margin-top: 20px;
-  text-align: left;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin-left: 5%;
 }
 
-.contact-info p {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin: 5px 0;
-}
-
-/* Skills */
 .skills {
   list-style: none;
-  padding: 0;
-  margin: 10px 0;
+  padding-left: 0;
+  margin-top: 10px;
+  width: 80%;
+  align-items: center;
+  margin-left:10%;
 }
 
 .skills li {
-  background: rgba(255, 255, 255, 0.1);
-  padding: 8px;
-  border-radius: 6px;
-  margin-bottom: 5px;
-}
-
-/* Download Button */
-.download-btn {
-  display: inline-block;
-  background-color: #ff9800;
-  color: white;
-  padding: 10px 15px;
+  background: rgb(161, 163, 218);
+  margin-bottom: 6px;
+  padding: 6px 10px;
   border-radius: 8px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: background 0.3s;
+
+}
+
+.container.dark .skills li {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.additional-info {
+  margin-top: 20px;
+  font-size: 0.9rem;
+  margin-left: 10%;
+}
+
+.download-btn,
+.theme-toggle {
   margin-top: 15px;
+  background: #4f46e5;
+  color: white;
+  border:#0f172a;
+  padding: 10px 15px;
+  border-radius: 12px;
   cursor: pointer;
+  display: block;
+  width: 80%;
+  margin-bottom: 10px;
+  margin-left: 10%;
 }
 
-.download-btn:hover {
-  background-color: #e68900;
+.download-btn:hover,
+.theme-toggle:hover {
+  background: #4338ca;
 }
 
-/* Main Content */
+/* MAIN CONTENT */
 .main-content {
   width: 70%;
 }
 
 .main-content section {
-  margin-bottom: 30px;
+  margin-bottom: 40px;
 }
 
+/* Wider Cards */
 .card-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 20px;
+  gap: 18px;
 }
 
 .card {
-  background: linear-gradient(135deg, #6a11cb, #2575fc);
-  border-radius: 12px;
-  padding: 20px;
-  color: white;
-  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
-  transition: transform 0.3s ease-in-out;
+  background: linear-gradient(135deg, #dbdaf3, #7993e8);
+  padding: 24px;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.container.dark .card {
+  background: linear-gradient(135deg, #1e3a8a, #0f172a);
+  color: #fff;
 }
 
 .card:hover {
-  transform: translateY(-8px);
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+.footer {
+  text-align: center;
+  margin-top: 40px;
+  padding: 20px 0;
+  font-size: 0.9rem;
+  color: #888;
+}
+
+.container.dark .footer {
+  color: #ccc;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-  .container {
-      flex-direction: column;
+  .content-wrapper {
+    flex-direction: row;
+    padding: 10px;
   }
 
-  .sidebar, .main-content {
-      width: 100%;
+  .sidebar,
+  .main-content {
+    width: 100%;
   }
 
   .card-container {
-      grid-template-columns: 1fr;
+    grid-template-columns: 1fr;
+  }
+
+  .profile-img-square {
+    width: 140px;
+    height: 140px;
   }
 }
-
-.sidebar {
-  text-align: center;  /* Centers all content inside */
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* Centers the image */
-  padding: 10px;
-}
-
-.profile-img {
-  width: 150px;    /* Square shape */
-  height: 150px;   /* Square shape */
-  object-fit: cover; /* Ensures the image fits well */
-  border-radius: 10px; /* Slightly rounded corners */
-  border: 2px solid #007bff; /* Optional border */
-  margin-bottom: 1px; /* Space below the image */
-}
-
