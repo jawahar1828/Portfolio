@@ -44,7 +44,14 @@ function App() {
             <p>🖌️ Sketch anime characters</p>
             <p>🎬 Premiere Pro Editor</p>
           </div>
-          <a href="/Resume.pdf" download className="download-btn">⬇ Download Resume</a>
+          <button className="download-btn" onClick={() => {
+           const link = document.createElement('a');
+           link.href = '/Resume.pdf';
+          link.download = 'Jawahar_Resume.pdf';
+          link.click();
+          }}>
+         ⬇ Download Resume
+          </button>
           <button className="theme-toggle" onClick={() => setDarkMode(!darkMode)}>
             {darkMode ? <FaSun /> : <FaMoon />} {darkMode ? "Light Mode" : "Dark Mode"}
           </button>
