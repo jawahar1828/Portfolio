@@ -1,7 +1,9 @@
 // React Install
+
 npx create-react-app my-app
 
 //Download git
+
 git init
 
 git add .
